@@ -1,0 +1,15 @@
+[package]
+name = "lz4_flex_py"
+version = "0.1.2"
+edition = "2018"
+description = "A Python wrapper for lz4_flex Rust crate"
+repository = "https://github.com/imbolc/lz4_flex_py"
+readme = "README.md"
+
+[lib]
+name = "lz4_flex"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.13", features = ["extension-module", "abi3-py36"] }
+lz4_flex = "0.8"
